@@ -32,23 +32,23 @@ int _atoi(char *s)
 
 void int_to_string(int n)
 {
-int divisor = 1, i, resp;
+	int divisor = 1, i, resp;
 
 
-for (i = 0; n / divisor > 9; i++)
-{
-	divisor *= 10;
-}
+	for (i = 0; n / divisor > 9; i++)
+	{
+		divisor *= 10;
+	}
 
-char str[i];
+	char str[i];
 
-for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
-{
-	resp = n / divisor;
-	str[cmpt] = '0' + resp;
-	n = n - resp * divisor;
-}
-str[i] = ('0' + n);
+	for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
+	{
+		resp = n / divisor;
+		str[cmpt] = '0' + resp;
+		n = n - resp * divisor;
+	}
+	str[i] = ('0' + n);
 
 }
 
